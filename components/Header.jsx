@@ -25,7 +25,14 @@ const Header = () => {
             </div>
             {/* btn */}
             <ScrollLink to="contact" smooth>
-              <button className="hidden btn xl:flex btn-accent mb-1 rounded-[25px] hover:scale-110 font-semibold transition duration-300">
+              <button
+                className="hidden btn xl:flex btn-accent mb-1 rounded-[25px] hover:scale-110 font-semibold transition duration-300"
+                onClick={() => {
+                  gtag("event", "conversion", {
+                    send_to: "AW-17060346146",
+                  });
+                }}
+              >
                 Get a Qoute
               </button>
             </ScrollLink>
